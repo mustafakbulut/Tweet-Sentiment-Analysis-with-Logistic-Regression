@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Tweet Sentiment Analysis</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<style>
+body {
+  background-image: url('/static/twitter.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+<body >
+
+ <div class="login">
+	<h2  style="color:#FFFF00;">Welcome to Tweet Sentiment Analysis with Logistic Regression</h2>
+  
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="tweet" placeholder="Enter a tweet" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict with Logistic Regression Algorithm</button>
+    </form>
+    <form action="{{ url_for('train')}}"method="post">
+        <center><button type="submit" >Train the Logistic Regression Model with 28000 tweets</button></center>
+            
+    </form>
+    <form action="{{ url_for('test')}}"method="post">
+        <center><button type="submit" >Test the model with 2000 tweets</button></center>
+    </form>
+    
+    
+    
+   <br>
+   <br>
+   <strong><mark>{{ text }}</mark></strong>
+ </div>
+</body>
+</html>
