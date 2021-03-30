@@ -2,8 +2,8 @@
 # Project Title: Tweet Sentiment Analysis 
 
 ## Contributors:
-	1)Mustafa Akbulut - 17011034	
-	2)Baris Erdemli - 17011009
+	1)Mustafa Akbulut
+	2)Baris Erdemli 
 
 ## Required Python modules for running the project:
 	- pip install -U Flask 
